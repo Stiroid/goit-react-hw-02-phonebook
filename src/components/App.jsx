@@ -26,7 +26,6 @@ export class App extends React.Component {
   formSubmitHandler = data =>{
     
     data.id = nanoid()
-    // console.log(data.id)
 
     const checkContact = this.state.contacts.find(contact => contact.name === data.name)
     
@@ -38,7 +37,6 @@ export class App extends React.Component {
   }
 
   onRemoveContact = contactId => {
-    // console.log(contactId)
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contactId !== contact.id),
     }))
